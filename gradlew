@@ -123,8 +123,10 @@ if [ -n "$JAVA_HOME" ] ; then
         # IBM's JDK on AIX uses strange locations for the executables
         JAVACMD=$JAVA_HOME/jre/sh/java
     else
-        #JAVACMD=$JAVA_HOME/bin/java #Dont use as java is too new
-        JAVACMD=$PWD/java/openjdk-18_windows-x64_bin/jdk-18/bin/java
+        JAVACMD=$JAVA_HOME/bin/java #Dont use if java is newer than Java 19,
+        #instead use the one below and instead link it to your java instance of below Java 19 
+        #IF you want the preserve the 'JAVA_HOME' variable
+        #JAVACMD=$PWD/java/openjdk-18_windows-x64_bin/jdk-18/bin/java
         echo "$JAVACMD"
     fi
     if [ ! -x "$JAVACMD" ] ; then
