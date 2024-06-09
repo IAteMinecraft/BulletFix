@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.example.bulletfix.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+		"MixinProjectileEntity"
+	],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8",
+  "priority": 9
+}
